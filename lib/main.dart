@@ -1,16 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import 'Features/splash/presentation/views/splash_view.dart';
+import 'constants.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const BookApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class BookApp extends StatelessWidget {
+  const BookApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: KPrimaryColor
+      ),
+      home:const SplashView(),
 
     );
   }
