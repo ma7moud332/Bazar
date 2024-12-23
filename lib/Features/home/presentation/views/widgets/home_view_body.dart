@@ -13,32 +13,36 @@ class HomeViewBody extends StatelessWidget {
     return CustomScrollView(
       slivers: [
         SliverToBoxAdapter(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children:const [
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 30),
-                  child: CustomAppBar(),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: const [
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 30),
+                child: CustomAppBar(),
+              ),
+              Padding(
+                padding: EdgeInsets.only(left: 30),
+                child: FeaturedBooksListView(),
+              ),
+              SizedBox(
+                height: 50,
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 30),
+                child: Text(
+                  'Best Seller',
+                  style: Styles.textStyle18,
                 ),
-                Padding(
-                  padding: EdgeInsets.only(left: 30),
-                  child: FeaturedBooksListView(),
-                ),
-                SizedBox(height: 50,),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 30),
-                  child: Text('Best Seller',
-                    style: Styles.textStyle18,
-                  ),
-                ),
-                SizedBox(height: 20,),
-
-              ],
-            ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+            ],
+          ),
         ),
         const SliverToBoxAdapter(
           child: Padding(
-            padding:  EdgeInsets.symmetric(horizontal: 30),
+            padding: EdgeInsets.symmetric(horizontal: 30),
             child: BestSellerListView(),
           ),
         )
@@ -46,5 +50,3 @@ class HomeViewBody extends StatelessWidget {
     );
   }
 }
-
-
