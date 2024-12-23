@@ -10,7 +10,7 @@ abstract class Failure{
 class ServerFailure extends Failure{
   ServerFailure(super.errMessage);
 
-  factory ServerFailure.fromDioError(DioError dioError){
+  factory ServerFailure.fromDioError(DioException dioError){
 
     switch(dioError.type){
       case DioExceptionType.connectionTimeout:
@@ -32,6 +32,7 @@ class ServerFailure extends Failure{
           return ServerFailure('No Internet Connection');
         }
         return ServerFailure('Unexpected Error , Please Try again!');
+      // ignore: unreachable_switch_default
       default:
         return ServerFailure('Opps There was an error,Please try again');
     }
