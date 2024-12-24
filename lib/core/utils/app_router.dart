@@ -1,7 +1,6 @@
 import 'package:book_app/core/utils/service_locator.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-
 import '../../Features/home/data/models/book_model/book_model.dart';
 import '../../Features/home/data/repository/home_repo_impl.dart';
 import '../../Features/home/presentation/manger/similar_books_cubit/similar_books__cubit.dart';
