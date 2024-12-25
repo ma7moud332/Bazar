@@ -9,7 +9,7 @@
     </queries>
 
     <application
-        android:label="Bazar"
+        android:label="Bookly"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
